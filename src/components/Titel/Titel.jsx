@@ -1,5 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Container } from 'react-bootstrap';
+import Dataversion from '../Dataversion/Dataversion';
+
 //import { Test } from './Titel.styles';
 
 class Titel extends PureComponent { 
@@ -40,8 +43,12 @@ class Titel extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="TitelWrapper fs-2">
-        Lichtenlijst
+      <div className="TitelWrapper fs-3 row">
+        <Container className='col'>
+          <div>Lichtenlijst</div>
+          <div>2023-01</div>
+        </Container>
+        
       </div>
     );
   }
