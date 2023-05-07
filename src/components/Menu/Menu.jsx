@@ -5,6 +5,7 @@ import { Navbar } from 'react-bootstrap';
 import Buttons from '../Buttons/Buttons';
 import Titel from '../Titel/Titel';
 import Appversion from '../Appversion/Appversion';
+
 //import { Test } from './Menu.styles';
 
 class Menu extends PureComponent { 
@@ -42,9 +43,13 @@ class Menu extends PureComponent {
 
   render () {
     if (this.state.hasError) {
+
       return <h1>Something went wrong.</h1>;
+
     }
+
     return (
+
       <div className="MenuWrapper">
         <Navbar bg="dark" expand="lg">
           <Container className='text-white'>
@@ -54,6 +59,7 @@ class Menu extends PureComponent {
           </Container>
         </Navbar>
       </div>
+      
     );
   }
 }
