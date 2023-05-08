@@ -1,8 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-//import { Test } from './Dataversion.styles';
+import { MapContainer } from 'react-leaflet/MapContainer';
+import { TileLayer } from 'react-leaflet/TileLayer';
+import { useMap } from 'react-leaflet/hooks';
 
-class Dataversion extends PureComponent { 
+
+
+class Chart extends PureComponent { 
   constructor(props) {
     super(props);
 
@@ -12,27 +16,27 @@ class Dataversion extends PureComponent {
   }
 
   componentWillMount = () => {
-    console.log('Dataversion will mount');
+    console.log('Chart will mount');
   }
 
   componentDidMount = () => {
-    console.log('Dataversion mounted');
+    console.log('Chart mounted');
   }
 
   componentWillReceiveProps = (nextProps) => {
-    console.log('Dataversion will receive props', nextProps);
+    console.log('Chart will receive props', nextProps);
   }
 
   componentWillUpdate = (nextProps, nextState) => {
-    console.log('Dataversion will update', nextProps, nextState);
+    console.log('Chart will update', nextProps, nextState);
   }
 
   componentDidUpdate = () => {
-    console.log('Dataversion did update');
+    console.log('Chart did update');
   }
 
   componentWillUnmount = () => {
-    console.log('Dataversion will unmount');
+    console.log('Chart will unmount');
   }
 
   render () {
@@ -40,19 +44,19 @@ class Dataversion extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="DataversionWrapper col-3 fs-4">
-        2023-01
+      <div className="ChartWrapper">
+        <MapContainer></MapContainer>
       </div>
     );
   }
 }
 
-Dataversion.propTypes = {
+Chart.propTypes = {
   // bla: PropTypes.string,
 };
 
-Dataversion.defaultProps = {
+Chart.defaultProps = {
   // bla: 'test',
 };
 
-export default Dataversion;
+export default Chart;

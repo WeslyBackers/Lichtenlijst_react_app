@@ -42,7 +42,7 @@ class Buttons extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="ButtonsWrapper">
+      <div className="ButtonsWrapper col-4">
         <Container>
           <Button>button 1</Button>
         </Container>
