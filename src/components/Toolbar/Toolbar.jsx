@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Menu from '../Menu/Menu';
 
 //import { Test } from './Toolbar.styles';
 
