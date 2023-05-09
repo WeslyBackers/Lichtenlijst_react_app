@@ -37,6 +37,14 @@ class Buttons extends PureComponent {
     console.log('Buttons will unmount');
   }
 
+  printBook = () => {
+    console.log('print book');
+  }
+
+  openInfo = () =>{
+    console.log('test');
+  }
+
   render () {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
@@ -52,11 +60,29 @@ class Buttons extends PureComponent {
     {'id':6,'caption':'Werkwijze','function':this.openWorkflow},
     {'id':7,'caption':'Geschiedenis','function':this.openHistory}
   ]
+  var buttons = []
+
+  buttonslist.forEach((item, index) =>{
+    buttons.push(
+      <Button className='p-1 m-1'
+      name={item.caption} 
+      id={item.id} 
+      functions={item.function} 
+      data_bs_toggle={item.data_bs_toggle} 
+      data_bs_target={item.data_bs_target} 
+      aria_controls={item.aria_controls} 
+      aria_expanded={item.aria_expanded}
+      key={item.id}
+      onClick={item.function}>
+      {item.caption}
+      </Button>)
+  })
+
 
     return (
-      <div className="ButtonsWrapper col-4">
+      <div className="ButtonsWrapper flex-grow">
         <Container>
-          <Button>button 1</Button>
+          {buttons}
         </Container>
       </div>
     );
