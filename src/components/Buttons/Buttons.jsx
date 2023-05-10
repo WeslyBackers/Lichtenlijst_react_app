@@ -80,8 +80,8 @@ class Buttons extends PureComponent {
 
 
     return (
-      <div className="ButtonsWrapper flex-grow">
-        <Container>
+      <div className="ButtonsWrapper justify-content-start">
+        <Container className='d-flex'>
           {buttons}
         </Container>
       </div>

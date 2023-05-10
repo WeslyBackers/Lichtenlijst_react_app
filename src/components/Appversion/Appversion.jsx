@@ -42,7 +42,7 @@ class Appversion extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="AppversionWrapper">
+      <div className="AppversionWrapper row-1">
         <Container>
           <Badge bg="info p-2">v1.0</Badge>
         </Container>

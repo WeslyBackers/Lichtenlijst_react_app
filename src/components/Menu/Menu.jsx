@@ -52,7 +52,7 @@ class Menu extends PureComponent {
 
       <div className="MenuWrapper">
         <Navbar bg="dark" expand="lg">
-          <Container className='text-white d-flex justify-items-around'>
+          <Container className='text-white d-flex justify-content-start'>
             <Buttons></Buttons>
             <Titel></Titel>
             <Appversion></Appversion>

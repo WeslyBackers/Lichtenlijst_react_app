@@ -43,10 +43,10 @@ class Titel extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="TitelWrapper fs-4 col">
-        <Container className='row'>
-          <div className='col-3'>Lichtenlijst</div>
-          <Dataversion></Dataversion>
+      <div className="TitelWrapper col-4 fs-4">
+        <Container className='d-flex'>
+          <div>Lichtenlijst</div>
+
         </Container>
         
       </div>
