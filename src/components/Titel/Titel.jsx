@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'react-bootstrap';
+
 import Dataversion from '../Dataversion/Dataversion';
 
 //import { Test } from './Titel.styles';
@@ -43,12 +43,8 @@ class Titel extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="TitelWrapper col-4 fs-4">
-        <Container className='d-flex'>
-          <div>Lichtenlijst</div>
-
-        </Container>
-        
+      <div className="TitelWrapper text-white">
+        <div className='d-flex'><h3>Lichtenlijst</h3><div>&nbsp;</div><Dataversion></Dataversion></div>
       </div>
     );
   }

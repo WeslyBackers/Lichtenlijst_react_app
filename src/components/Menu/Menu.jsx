@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import  { Container}   from 'react-bootstrap';
+
 import { Navbar } from 'react-bootstrap';
 import Buttons from '../Buttons/Buttons';
 import Titel from '../Titel/Titel';
@@ -51,12 +51,10 @@ class Menu extends PureComponent {
     return (
 
       <div className="MenuWrapper">
-        <Navbar bg="dark" expand="lg">
-          <Container className='text-white d-flex justify-content-start'>
+        <Navbar className="justify-content-between p-2" bg="dark" expand="lg">
             <Buttons></Buttons>
             <Titel></Titel>
             <Appversion></Appversion>
-          </Container>
         </Navbar>
       </div>
       

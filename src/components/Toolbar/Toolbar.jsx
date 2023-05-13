@@ -42,6 +42,7 @@ class Toolbar extends PureComponent {
     }
     return (
       <div className="ToolbarWrapper">
+
         Test content
       </div>
     );

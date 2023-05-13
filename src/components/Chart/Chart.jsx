@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { MapContainer } from 'react-leaflet/MapContainer';
-import { TileLayer } from 'react-leaflet/TileLayer';
-import { useMap } from 'react-leaflet/hooks';
+import { MapContainer, TileLayer, useMap } from 'react-leaflet';
+import { Marker } from 'react-leaflet';
+import { Popup } from 'react-leaflet';
 
 
 
@@ -40,12 +40,26 @@ class Chart extends PureComponent {
   }
 
   render () {
+    const position = [51.505, -0.09];
+    
     if (this.state.hasError) {
+      
       return <h1>Something went wrong.</h1>;
+      
     }
+
     return (
       <div className="ChartWrapper">
-        <MapContainer></MapContainer>
+        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+          <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
       </div>
     );
   }

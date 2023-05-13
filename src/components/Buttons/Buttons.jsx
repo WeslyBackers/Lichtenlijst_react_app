@@ -56,7 +56,7 @@ class Buttons extends PureComponent {
     {'id':2,'caption':'Inleiding','function':this.openInleiding,'data_bs_toggle':'collapse','data_bs_target':'#inleiding','aria_controls':'collapseExample','aria_expanded':'false'},
     {'id':3,'caption':'Kaart','function':this.openChart,'data_bs_toggle':'collapse','data_bs_target':'#chart','aria_controls':'collapseExample','aria_expanded':'false'},
     {'id':4,'caption':'Print','function':this.printBook.bind(this)},
-    {'id':5,'caption':'Info data','function':this.openInfo.bind,'data_bs_toggle':'collapse','data_bs_target':'#info','aria_controls':'collapseExample','aria_expanded':'true'},
+    {'id':5,'caption':'Info data','function':this.openInfo.bind(this),'data_bs_toggle':'collapse','data_bs_target':'#info','aria_controls':'collapseExample','aria_expanded':'true'},
     {'id':6,'caption':'Werkwijze','function':this.openWorkflow},
     {'id':7,'caption':'Geschiedenis','function':this.openHistory}
   ]
@@ -81,9 +81,7 @@ class Buttons extends PureComponent {
 
     return (
       <div className="ButtonsWrapper justify-content-start">
-        <Container className='d-flex'>
           {buttons}
-        </Container>
       </div>
     );
   }

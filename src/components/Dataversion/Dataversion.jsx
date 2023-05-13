@@ -36,12 +36,17 @@ class Dataversion extends PureComponent {
   }
 
   render () {
+
+    const version ="2023-01";
+
     if (this.state.hasError) {
+
       return <h1>Something went wrong.</h1>;
     }
+    
     return (
-      <div className="DataversionWrapper col-3 fs-4">
-        2023-01
+      <div className="DataversionWrapper text-white">
+        <h3>{version}</h3>
       </div>
     );
   }
