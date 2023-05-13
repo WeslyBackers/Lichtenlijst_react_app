@@ -51,7 +51,7 @@ class Menu extends PureComponent {
     return (
 
       <div className="MenuWrapper">
-        <Navbar className="justify-content-between p-2" bg="dark" expand="lg">
+        <Navbar className="justify-content-between p-1" bg="dark" expand="lg">
             <Buttons></Buttons>
             <Titel></Titel>
             <Appversion></Appversion>

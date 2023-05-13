@@ -80,7 +80,7 @@ class Buttons extends PureComponent {
 
 
     return (
-      <div className="ButtonsWrapper justify-content-start">
+      <div className="ButtonsWrapper mx-4 justify-content-start">
           {buttons}
       </div>
     );

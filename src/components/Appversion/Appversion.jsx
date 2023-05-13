@@ -43,7 +43,7 @@ class Appversion extends PureComponent {
     }
     return (
       <div className="AppversionWrapper">
-          <Badge bg="info p-2">v1.0</Badge>
+          <Badge bg="info mx-4 p-1">v1.0</Badge>
       </div>
     );
   }
