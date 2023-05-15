@@ -49,7 +49,7 @@ class Chart extends PureComponent {
     }
 
     return (
-      <div className="ChartWrapper" id="map-id">
+      <div className="ChartWrapper map-id" id="map-id">
         <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
           <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

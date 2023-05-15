@@ -51,20 +51,21 @@ class Buttons extends PureComponent {
     }
 
     var buttonslist = [    
-    {'id':0,'caption':'JSON','function':this.openJson},
-    {'id':1,'caption':'GML','function':this.openGml},
-    {'id':2,'caption':'Inleiding','function':this.openInleiding,'data_bs_toggle':'collapse','data_bs_target':'#inleiding','aria_controls':'collapseExample','aria_expanded':'false'},
-    {'id':3,'caption':'Kaart','function':this.openChart,'data_bs_toggle':'collapse','data_bs_target':'#chart','aria_controls':'collapseExample','aria_expanded':'false'},
-    {'id':4,'caption':'Print','function':this.printBook.bind(this)},
-    {'id':5,'caption':'Info data','function':this.openInfo.bind(this),'data_bs_toggle':'collapse','data_bs_target':'#info','aria_controls':'collapseExample','aria_expanded':'true'},
-    {'id':6,'caption':'Werkwijze','function':this.openWorkflow},
-    {'id':7,'caption':'Geschiedenis','function':this.openHistory}
+    {'id':0,'caption':'JSON','function':this.openJson,'style':'primary'},
+    {'id':1,'caption':'GML','function':this.openGml, 'style':'primary'},
+    {'id':2,'caption':'Inleiding','function':this.openInleiding,'data_bs_toggle':'collapse','data_bs_target':'#inleiding','aria_controls':'collapseExample','aria_expanded':'false','style':'info'},
+    {'id':3,'caption':'Kaart','function':this.openChart,'data_bs_toggle':'collapse','data_bs_target':'#chart','aria_controls':'collapseExample','aria_expanded':'false','style':'primary'},
+    {'id':4,'caption':'Print','function':this.printBook.bind(this),'style':'primary'},
+    {'id':5,'caption':'Info data','function':this.openInfo.bind(this),'data_bs_toggle':'collapse','data_bs_target':'#info','aria_controls':'collapseExample','aria_expanded':'true','style':'primary'},
+    {'id':6,'caption':'Werkwijze','function':this.openWorkflow,'style':'info'},
+    {'id':7,'caption':'Geschiedenis','function':this.openHistory,'style':'info'}
   ]
   var buttons = []
 
   buttonslist.forEach((item, index) =>{
     buttons.push(
       <Button className='p-1 m-1'
+      variant={item.style}
       name={item.caption} 
       id={item.id} 
       functions={item.function} 

@@ -43,7 +43,7 @@ class Titel extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="TitelWrapper text-white">
+      <div className="TitelWrapper text-white mt-1">
         <div className='d-flex'><h3>Lichtenlijst</h3><div>&nbsp;</div><Dataversion></Dataversion></div>
       </div>
     );
