@@ -1,16 +1,13 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { MapContainer, TileLayer } from 'react-leaflet';
-import { Marker } from 'react-leaflet';
-import { Popup } from 'react-leaflet';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { MapContainer, TileLayer } from "react-leaflet";
+import { Marker } from "react-leaflet";
+import { Popup } from "react-leaflet";
 //import to insert this leaflet css
-import 'leaflet/dist/leaflet.css';
-import '../../css/Chart.css';
+import "leaflet/dist/leaflet.css";
+import "../../css/Chart.css";
 
-
-
-
-class Chart extends PureComponent { 
+class Chart extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -20,42 +17,41 @@ class Chart extends PureComponent {
   }
 
   componentWillMount = () => {
-    console.log('Chart will mount');
-  }
+    console.log("Chart will mount");
+  };
 
   componentDidMount = () => {
-    console.log('Chart mounted');
-  }
+    console.log("Chart mounted");
+  };
 
   componentWillReceiveProps = (nextProps) => {
-    console.log('Chart will receive props', nextProps);
-  }
+    console.log("Chart will receive props", nextProps);
+  };
 
   componentWillUpdate = (nextProps, nextState) => {
-    console.log('Chart will update', nextProps, nextState);
-  }
+    console.log("Chart will update", nextProps, nextState);
+  };
 
   componentDidUpdate = () => {
-    console.log('Chart did update');
-  }
+    console.log("Chart did update");
+  };
 
   componentWillUnmount = () => {
-    console.log('Chart will unmount');
-  }
+    console.log("Chart will unmount");
+  };
 
-  render () {
-    const position = [51.505, -0.09];
-    
+  render() {
+    const position = [51.305, 3.0];
+
     if (this.state.hasError) {
-      
       return <h1>Something went wrong.</h1>;
-      
     }
 
     return (
       <div className="ChartWrapper map-id" id="map-id">
         <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-          <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={position}>

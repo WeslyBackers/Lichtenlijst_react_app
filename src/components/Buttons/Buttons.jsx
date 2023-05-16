@@ -26,15 +26,47 @@ class Buttons extends PureComponent {
   }
 
   componentWillUpdate = (nextProps, nextState) => {
+
     console.log('Buttons will update', nextProps, nextState);
+
   }
 
   componentDidUpdate = () => {
+
     console.log('Buttons did update');
+
   }
 
   componentWillUnmount = () => {
+
     console.log('Buttons will unmount');
+
+  }
+
+  openChart = () =>{
+
+
+    var chart = document.getElementsByClassName('ChartWrapper');
+    console.log(chart);
+    // chart[0] is first tag with specifications about elements' classnames
+    console.log(chart[0].classList);
+
+    if (chart[0].classList.contains('visually-hidden'))
+
+    {
+
+      chart[0].classList.remove('visually-hidden');
+
+    }
+
+    else{
+
+      chart[0].classList.add('visually-hidden');
+
+    }
+    
+    
+
   }
 
   printBook = () => {
@@ -45,6 +77,8 @@ class Buttons extends PureComponent {
     console.log('test');
   }
 
+
+
   render () {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
@@ -54,7 +88,7 @@ class Buttons extends PureComponent {
     {'id':0,'caption':'JSON','function':this.openJson,'style':'primary'},
     {'id':1,'caption':'GML','function':this.openGml, 'style':'primary'},
     {'id':2,'caption':'Inleiding','function':this.openInleiding,'data_bs_toggle':'collapse','data_bs_target':'#inleiding','aria_controls':'collapseExample','aria_expanded':'false','style':'info'},
-    {'id':3,'caption':'Kaart','function':this.openChart,'data_bs_toggle':'collapse','data_bs_target':'#chart','aria_controls':'collapseExample','aria_expanded':'false','style':'primary'},
+    {'id':3,'caption':'Kaart','function':this.openChart.bind(this),'data_bs_toggle':'collapse','data_bs_target':'#chart','aria_controls':'collapseExample','aria_expanded':'false','style':'primary'},
     {'id':4,'caption':'Print','function':this.printBook.bind(this),'style':'primary'},
     {'id':5,'caption':'Info data','function':this.openInfo.bind(this),'data_bs_toggle':'collapse','data_bs_target':'#info','aria_controls':'collapseExample','aria_expanded':'true','style':'primary'},
     {'id':6,'caption':'Werkwijze','function':this.openWorkflow,'style':'info'},
