@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { Marker } from 'react-leaflet';
 import { Popup } from 'react-leaflet';
+//import to insert this leaflet css
+import 'leaflet/dist/leaflet.css';
+import '../../css/Chart.css';
+
 
 
 

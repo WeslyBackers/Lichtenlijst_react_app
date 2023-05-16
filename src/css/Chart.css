@@ -1,0 +1,5 @@
+/* Use this ".leaflet-container" css to make it work*/
+.leaflet-container {
+    width: 100wh; 
+    height: 50vh;
+  }
