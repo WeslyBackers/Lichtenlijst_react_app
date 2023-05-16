@@ -8,7 +8,6 @@ import Dataversion from '../Dataversion/Dataversion';
 class Titel extends PureComponent { 
   constructor(props) {
     super(props);
-
     this.state = {
       hasError: false,
     };

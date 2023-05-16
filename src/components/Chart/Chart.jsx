@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { MapContainer, TileLayer, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import { Marker } from 'react-leaflet';
 import { Popup } from 'react-leaflet';
 
@@ -49,17 +49,17 @@ class Chart extends PureComponent {
     }
 
     return (
-      <div className="ChartWrapper map-id" id="map-id">
+      <div className="ChartWrappers" id="map-id">
         <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-          <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={position}>
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
           </Marker>
-        </MapContainer>
+        </MapContainer>,
       </div>
     );
   }
