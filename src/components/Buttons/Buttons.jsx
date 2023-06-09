@@ -43,13 +43,35 @@ class Buttons extends PureComponent {
 
   }
 
+  openFullscreen = () => {
+    var chart = document.getElementsByClassName('ChartWrapper');
+    if (chart.requestFullscreen) {
+      chart.requestFullscreen();
+    } else if (document.webkitRequestFullscreen) { /* Safari */
+      chart.webkitRequestFullscreen();
+    } else if (document.msRequestFullscreen) { /* IE11 */
+      chart.msRequestFullscreen();
+    }
+  }
+
+  closeFullscreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+      document.msExitFullscreen();
+    }
+  }
+
+
   openChart = () =>{
-
-
     var chart = document.getElementsByClassName('ChartWrapper');
     console.log(chart);
     // chart[0] is first tag with specifications about elements' classnames
     console.log(chart[0].classList);
+    //this.openFullscreen();
+    //this.closeFullscreen();
 
     if (chart[0].classList.contains('visually-hidden'))
 
@@ -69,8 +91,9 @@ class Buttons extends PureComponent {
 
   }
 
+
   printBook = () => {
-    console.log('print book');
+    window.print();
   }
 
   openInfo = () =>{

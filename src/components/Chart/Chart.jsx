@@ -21,7 +21,8 @@ class Chart extends PureComponent {
   };
 
   componentDidMount = () => {
-    console.log("Chart mounted");
+    console.log("Chart mounted"); 
+    
   };
 
   componentWillReceiveProps = (nextProps) => {
@@ -40,6 +41,28 @@ class Chart extends PureComponent {
     console.log("Chart will unmount");
   };
 
+  openFullscreen = () => {
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }
+  
+  /* Close fullscreen */
+  closeFullscreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+      document.msExitFullscreen();
+    }
+  }
+
   render() {
     const position = [51.305, 3.0];
 
@@ -48,7 +71,7 @@ class Chart extends PureComponent {
     }
 
     return (
-      <div className="ChartWrapper map-id" id="map-id">
+      <div className="ChartWrapper flex map-id visually-hidden" id="map-id">
         <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
