@@ -71,8 +71,8 @@ class Chart extends PureComponent {
     }
 
     return (
-      <div className="ChartWrapper flex map-id visually-hidden" id="map-id">
-        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <div className="ChartWrapper map-id flex row col" id="map-id">
+        <MapContainer center={position} zoom={13} scrollWheelZoom={false} scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

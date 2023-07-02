@@ -1,18 +1,24 @@
+//import components
 import './App.css';
-import Menu from './components/Menu/Menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Book from './components/Book/Book';
-import GisInfo from './components/GisInfo/GisInfo';
+import Lichtenlijst from './components/Lichtenlijst/Lichtenlijst';
+//import modules
+import { Axios } from 'axios';
+
+const axios = require('axios');
+
+//global app declarations
 
 
 function App() {
+
+
   return (
-    <div className="App">
-        <Menu></Menu>
-        <GisInfo></GisInfo>
-        <Book></Book>
+    <div className="App" data={window.data}>
+      <Lichtenlijst></Lichtenlijst>
     </div>
   );
 }
+
 
 export default App;

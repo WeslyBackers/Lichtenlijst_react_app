@@ -66,7 +66,7 @@ class Buttons extends PureComponent {
 
 
   openChart = () =>{
-    var chart = document.getElementsByClassName('ChartWrapper');
+    var chart = document.getElementsByClassName('GisInfoWrapper');
     console.log(chart);
     // chart[0] is first tag with specifications about elements' classnames
     console.log(chart[0].classList);

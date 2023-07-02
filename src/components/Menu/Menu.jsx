@@ -8,21 +8,24 @@ import Appversion from '../Appversion/Appversion';
 
 //import { Test } from './Menu.styles';
 
+
 class Menu extends PureComponent { 
   constructor(props) {
     super(props);
 
     this.state = {
       hasError: false,
+      data:[],
     };
   }
 
   componentWillMount = () => {
-    console.log('Menu will mount');
+    console.log('Menu will mount');   
   }
 
   componentDidMount = () => {
     console.log('Menu mounted');
+  
   }
 
   componentWillReceiveProps = (nextProps) => {
@@ -42,6 +45,7 @@ class Menu extends PureComponent {
   }
 
   render () {
+    console.log(this.state.data);
     if (this.state.hasError) {
 
       return <h1>Something went wrong.</h1>;
@@ -51,7 +55,7 @@ class Menu extends PureComponent {
     return (
 
       <div className="MenuWrapper">
-        <Navbar className="justify-content-between p-1" bg="dark" expand="lg">
+        <Navbar className="justify-content-between" bg="dark" expand="lg">
             <Buttons></Buttons>
             <Titel></Titel>
             <Appversion></Appversion>

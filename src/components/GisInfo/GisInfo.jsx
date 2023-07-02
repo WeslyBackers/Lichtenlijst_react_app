@@ -42,7 +42,7 @@ class GisInfo extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="GisInfoWrapper d-flex flex-fill">
+      <div className="GisInfoWrapper d-flex flex-items col mx-2">
         <Chart></Chart>
         <ObjectInfo></ObjectInfo>
       </div>

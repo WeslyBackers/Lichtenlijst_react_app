@@ -40,7 +40,7 @@ class LightsTable extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="LightsTableWrapper table table-striped table-responsive sticky">
+      <div className="LightsTableWrapper card table">
         <thead>
           <tr>
             <th>test</th>
@@ -52,6 +52,30 @@ class LightsTable extends PureComponent {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+          </tr>
+          <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+          </tr>
+          <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+          </tr>
           <tr>
             <td>test</td>
             <td>test</td>

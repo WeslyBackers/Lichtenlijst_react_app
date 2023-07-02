@@ -1,5 +1,12 @@
 /* Use this ".leaflet-container" css to make it work*/
-.leaflet-container {
-    width: 70vw; 
+.ChartWrapper {
+    width: 80vw;
     height: 50vh;
+  
+  }
+
+  .leaflet-control-zoom{
+    
+    margin-left:5px;
+
   }

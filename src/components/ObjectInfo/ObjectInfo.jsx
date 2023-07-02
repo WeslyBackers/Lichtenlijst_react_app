@@ -42,8 +42,8 @@ class ObjectInfo extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="ObjectInfoWrapper bg-light text-white border-dark">
-        <Card className=''></Card>
+      <div className="ObjectInfoWrapper flex row m-2 p-2 text-white border-dark">
+        <Card className='bg-light'></Card>
       </div>
     );
   }
