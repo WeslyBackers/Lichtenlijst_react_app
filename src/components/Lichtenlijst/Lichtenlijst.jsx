@@ -9,7 +9,7 @@ import GisInfo from '../GisInfo/GisInfo';
 import LightsTable from '../LightsTable/LightsTable';
 
 const axios = require('axios');
-var data=[];
+
 
 class Lichtenlijst extends PureComponent { 
   constructor(props) {
@@ -17,29 +17,25 @@ class Lichtenlijst extends PureComponent {
 
     this.state = {
       hasError: false,
-      data:[],
+      data:this.componentDidMount,
     };
+  
   }
+
 
   componentWillMount = () => {
     console.log('Lichtenlijst will mount');
+
   }
 
-    componentDidMount = () => {
-      axios.get('http://192.168.68.70:50100/lichtenlijst')
-      .then(function (response) {
-        data = response;
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
-    .finally(function () {
-      // always executed
-
+  componentDidMount = () => {
+  axios.get('http://192.168.68.70:50100/lichtenlijst')
+    .then(function (response) {
+      var data = response;
+      return(data);
     });
 
-  this.setState({data:data});
+    
   }
 
   componentWillReceiveProps = (nextProps) => {
@@ -53,6 +49,7 @@ class Lichtenlijst extends PureComponent {
 
   componentDidUpdate = () => {
     console.log('Lichtenlijst did update');
+
   }
 
   componentWillUnmount = () => {

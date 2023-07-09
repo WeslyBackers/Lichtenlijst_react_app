@@ -40,7 +40,9 @@ class LightsTable extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="LightsTableWrapper card table">
+      
+      <div className="LightsTableWrapper  p-2 table">
+        <h4 className='h4-title'>Gegevens van de lichten</h4>
         <thead>
           <tr>
             <th>test</th>
