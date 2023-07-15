@@ -13,29 +13,21 @@ class ObjectInfo extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('ObjectInfo will mount');
-  }
+
 
   componentDidMount = () => {
     console.log('ObjectInfo mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('ObjectInfo will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('ObjectInfo will update', nextProps, nextState);
-  }
+
+
 
   componentDidUpdate = () => {
     console.log('ObjectInfo did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('ObjectInfo will unmount');
-  }
+
 
   render () {
     if (this.state.hasError) {

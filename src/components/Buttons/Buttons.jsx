@@ -13,23 +13,14 @@ class Buttons extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('Buttons will mount');
-  }
+
 
   componentDidMount = () => {
     console.log('Buttons mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('Buttons will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
 
-    console.log('Buttons will update', nextProps, nextState);
-
-  }
 
   componentDidUpdate = () => {
 
@@ -37,11 +28,7 @@ class Buttons extends PureComponent {
 
   }
 
-  componentWillUnmount = () => {
 
-    console.log('Buttons will unmount');
-
-  }
 
   openFullscreen = () => {
     var chart = document.getElementsByClassName('ChartWrapper');

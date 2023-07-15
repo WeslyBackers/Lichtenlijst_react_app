@@ -13,29 +13,19 @@ class GisInfo extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('GisInfo will mount');
-  }
+
 
   componentDidMount = () => {
     console.log('GisInfo mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('GisInfo will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('GisInfo will update', nextProps, nextState);
-  }
+
 
   componentDidUpdate = () => {
     console.log('GisInfo did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('GisInfo will unmount');
-  }
 
   render () {
     if (this.state.hasError) {

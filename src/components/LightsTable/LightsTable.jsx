@@ -11,29 +11,17 @@ class LightsTable extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('LightsTable will mount');
-  }
 
   componentDidMount = () => {
     console.log('LightsTable mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('LightsTable will receive props', nextProps);
-  }
-
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('LightsTable will update', nextProps, nextState);
-  }
 
   componentDidUpdate = () => {
     console.log('LightsTable did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('LightsTable will unmount');
-  }
+
 
   render () {
     if (this.state.hasError) {

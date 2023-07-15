@@ -12,29 +12,19 @@ class Book extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('Book will mount');
-  }
+
 
   componentDidMount = () => {
     console.log('Book mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('Book will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('Book will update', nextProps, nextState);
-  }
 
   componentDidUpdate = () => {
     console.log('Book did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('Book will unmount');
-  }
+
 
   render () {
     if (this.state.hasError) {
