@@ -7,10 +7,17 @@ import { Axios } from 'axios';
 import Menu from '../Menu/Menu';
 import GisInfo from '../GisInfo/GisInfo';
 import LightsTable from '../LightsTable/LightsTable';
-import { type } from '@testing-library/user-event/dist/type';
 
 const axios = require('axios');
 
+var data;
+
+axios.get('http://192.168.68.70:50100/lichtenlijst')
+  .then(function (response) {
+    data = response;
+  });
+
+this.setState({data:data});
 
 class Lichtenlijst extends PureComponent { 
   constructor(props) {
@@ -23,20 +30,9 @@ class Lichtenlijst extends PureComponent {
   
   }
 
-
-
-
   componentDidMount = () => {
-  axios.get('http://192.168.68.70:50100/lichtenlijst')
-    .then(function (response) {
-      var data = response;
 
-      console.log(data);
-      //dataJson = JSON.stringify(data);
-      console.log((JSON.stringify(data.data)));
-      return(data);
-    });
-
+    console.log(this.state.data);
     
   }
 
@@ -45,7 +41,7 @@ class Lichtenlijst extends PureComponent {
     console.log('Lichtenlijst did update');
 
   }
-
+Ò
  
 
   render () {
