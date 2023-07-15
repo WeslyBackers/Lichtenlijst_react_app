@@ -18,21 +18,15 @@ class Chart extends PureComponent {
     };
   }
 
-
-
   componentDidMount = () => {
     console.log("Chart mounted"); 
     
   };
 
 
-
-
-
   componentDidUpdate = () => {
     console.log("Chart did update");
   };
-
 
 
   openFullscreen = () => {
@@ -66,7 +60,7 @@ class Chart extends PureComponent {
     }
 
     return (
-      <div className="ChartWrapper map-id" id="map-id">
+      <div className="ChartWrapper card m-1 border-dark map-id" id="map-id">
         <MapContainer center={position} zoom={13} scrollWheelZoom={false} >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
