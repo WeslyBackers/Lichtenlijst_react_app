@@ -1,13 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import LightsTable from '../LightsTable/LightsTable';
+//import { Test } from './Book.styles';
 
-import Dataversion from '../Dataversion/Dataversion';
-
-//import { Test } from './Titel.styles';
-
-class Titel extends PureComponent { 
+class Book extends PureComponent { 
   constructor(props) {
     super(props);
+
     this.state = {
       hasError: false,
     };
@@ -16,14 +15,13 @@ class Titel extends PureComponent {
 
 
   componentDidMount = () => {
-    console.log('Titel mounted');
+    console.log('Book mounted');
   }
 
 
 
-
   componentDidUpdate = () => {
-    console.log('Titel did update');
+    console.log('Book did update');
   }
 
 
@@ -33,19 +31,20 @@ class Titel extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="TitelWrapper text-white mt-1">
-        <div className='d-flex'><h3>Lichtenlijst</h3><div>&nbsp;</div><Dataversion></Dataversion></div>
+      <div className="BookWrapper">
+        <h3>Lichtenlijst</h3>
+        <LightsTable></LightsTable>
       </div>
     );
   }
 }
 
-Titel.propTypes = {
+Book.propTypes = {
   // bla: PropTypes.string,
 };
 
-Titel.defaultProps = {
+Book.defaultProps = {
   // bla: 'test',
 };
 
-export default Titel;
+export default Book;

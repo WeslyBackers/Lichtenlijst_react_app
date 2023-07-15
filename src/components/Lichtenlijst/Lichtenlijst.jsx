@@ -7,6 +7,7 @@ import { Axios } from 'axios';
 import Menu from '../Menu/Menu';
 import GisInfo from '../GisInfo/GisInfo';
 import LightsTable from '../LightsTable/LightsTable';
+import { type } from '@testing-library/user-event/dist/type';
 
 const axios = require('axios');
 
@@ -23,38 +24,29 @@ class Lichtenlijst extends PureComponent {
   }
 
 
-  componentWillMount = () => {
-    console.log('Lichtenlijst will mount');
 
-  }
 
   componentDidMount = () => {
   axios.get('http://192.168.68.70:50100/lichtenlijst')
     .then(function (response) {
       var data = response;
+
+      console.log(data);
+      //dataJson = JSON.stringify(data);
+      console.log((JSON.stringify(data.data)));
       return(data);
     });
 
     
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('Lichtenlijst will receive props', nextProps);
-  
-  }
-
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('Lichtenlijst will update', nextProps, nextState);
-  }
 
   componentDidUpdate = () => {
     console.log('Lichtenlijst did update');
 
   }
 
-  componentWillUnmount = () => {
-    console.log('Lichtenlijst will unmount');
-  }
+ 
 
   render () {
     if (this.state.hasError) {

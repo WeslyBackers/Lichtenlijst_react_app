@@ -18,30 +18,16 @@ class Chart extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log("Chart will mount");
-  };
-
   componentDidMount = () => {
     console.log("Chart mounted"); 
     
   };
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log("Chart will receive props", nextProps);
-  };
-
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log("Chart will update", nextProps, nextState);
-  };
 
   componentDidUpdate = () => {
     console.log("Chart did update");
   };
 
-  componentWillUnmount = () => {
-    console.log("Chart will unmount");
-  };
 
   openFullscreen = () => {
     var elem = document.documentElement;
@@ -74,7 +60,7 @@ class Chart extends PureComponent {
     }
 
     return (
-      <div className="ChartWrapper map-id" id="map-id">
+      <div className="ChartWrapper card m-1 border-dark map-id" id="map-id">
         <MapContainer center={position} zoom={13} scrollWheelZoom={false} >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '

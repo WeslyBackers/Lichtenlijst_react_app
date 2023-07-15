@@ -13,29 +13,20 @@ class Appversion extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('Appversion will mount');
-  }
+
 
   componentDidMount = () => {
     console.log('Appversion mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('Appversion will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('Appversion will update', nextProps, nextState);
-  }
+
 
   componentDidUpdate = () => {
     console.log('Appversion did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('Appversion will unmount');
-  }
+
 
   render () {
     if (this.state.hasError) {

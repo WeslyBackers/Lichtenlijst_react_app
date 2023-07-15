@@ -19,30 +19,20 @@ class Menu extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('Menu will mount');   
-  }
+
 
   componentDidMount = () => {
     console.log('Menu mounted');
   
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('Menu will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('Menu will update', nextProps, nextState);
-  }
 
   componentDidUpdate = () => {
     console.log('Menu did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('Menu will unmount');
-  }
+ 
 
   render () {
     console.log(this.state.data);

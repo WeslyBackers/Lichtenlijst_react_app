@@ -13,36 +13,26 @@ class GisInfo extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('GisInfo will mount');
-  }
+
 
   componentDidMount = () => {
     console.log('GisInfo mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('GisInfo will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('GisInfo will update', nextProps, nextState);
-  }
+
 
   componentDidUpdate = () => {
     console.log('GisInfo did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('GisInfo will unmount');
-  }
 
   render () {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="GisInfoWrapper d-flex flex-items col mx-2">
+      <div className="GisInfoWrapper d-flex flex-items col">
         <Chart></Chart>
         <ObjectInfo></ObjectInfo>
       </div>

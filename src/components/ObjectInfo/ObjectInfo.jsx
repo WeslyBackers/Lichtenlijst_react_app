@@ -13,36 +13,28 @@ class ObjectInfo extends PureComponent {
     };
   }
 
-  componentWillMount = () => {
-    console.log('ObjectInfo will mount');
-  }
+
 
   componentDidMount = () => {
     console.log('ObjectInfo mounted');
   }
 
-  componentWillReceiveProps = (nextProps) => {
-    console.log('ObjectInfo will receive props', nextProps);
-  }
 
-  componentWillUpdate = (nextProps, nextState) => {
-    console.log('ObjectInfo will update', nextProps, nextState);
-  }
+
+
 
   componentDidUpdate = () => {
     console.log('ObjectInfo did update');
   }
 
-  componentWillUnmount = () => {
-    console.log('ObjectInfo will unmount');
-  }
+
 
   render () {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="ObjectInfoWrapper flex row m-2 p-2 text-white border-dark">
+      <div className="ObjectInfoWrapper flex row m-1 p-1 text-white border-dark">
         <Card className='bg-light'></Card>
       </div>
     );
