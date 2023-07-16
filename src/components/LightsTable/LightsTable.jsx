@@ -2,6 +2,9 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 //import { Test } from './LightsTable.styles';
 
+//import CSS
+import '../../css/Lightstable.css';
+
 class LightsTable extends PureComponent { 
   constructor(props) {
     super(props);
@@ -29,60 +32,61 @@ class LightsTable extends PureComponent {
     }
     return (
       
-      <div className="LightsTableWrapper  p-2 table">
+      <div className="LightsTableWrapper p-2 table">
         <h4 className='h4-title'>Gegevens van de lichten</h4>
-        <thead>
-          <tr>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-            <th>test</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-          </tr>
-          <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-          </tr>
-          <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-          </tr>
-          <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-          </tr>
-          <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-          </tr>
-        </tbody>
+        <table className=''>
+            <tr>
+              <th>test</th>
+              <th>test</th>
+              <th>test</th>
+              <th>test</th>
+              <th>test</th>
+              <th>test</th>
+            </tr>
+ 
+          <tbody>
+            <tr>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+            </tr>
+            <tr>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+            </tr>
+            <tr>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+            </tr>
+            <tr>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+            </tr>
+            <tr>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+              <td>test</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   }
