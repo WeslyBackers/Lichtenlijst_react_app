@@ -10,14 +10,15 @@ import LightsTable from '../LightsTable/LightsTable';
 
 const axios = require('axios');
 
-var data;
+var data =[];
 
 axios.get('http://192.168.68.70:50100/lichtenlijst')
   .then(function (response) {
     data = response;
+    this.setState({'data':data});
   });
 
-this.setState({data:data});
+
 
 class Lichtenlijst extends PureComponent { 
   constructor(props) {
