@@ -32,60 +32,31 @@ class LightsTable extends PureComponent {
     }
     return (
       
-      <div className="LightsTableWrapper p-2 table">
+      <div className="LightsTableWrapper table table-bordered">
         <h4 className='h4-title'>Gegevens van de lichten</h4>
         <table className=''>
+          <thead>
             <tr>
-              <th>test</th>
-              <th>test</th>
-              <th>test</th>
-              <th>test</th>
-              <th>test</th>
-              <th>test</th>
-            </tr>
- 
-          <tbody>
-            <tr>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
+              <th className='text-center p-2'>VOLGNR.</th>
+              <th className='text-center'>GEBIED-PLAATS-NAAM</th>
+              <th className='text-center'>POSITIE GEO.</th>
+              <th className='text-center' >LICHT-EN MISTSEIN</th>
+              <th className='text-center'>HOOGTE</th>
+              <th className='text-center'>DRACHT</th>
+              <th className='text-center'>BESCHRIJVING</th>
+              <th className='text-center'>VERDERE GEGEVENS</th>
             </tr>
             <tr>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
+              <th className='text-center p-2'>(1)</th>
+              <th className='text-center'>(2)</th>
+              <th className='text-center'>(3)</th>
+              <th className='text-center'>(4)</th>
+              <th className='text-center'>(5)</th>
+              <th className='text-center'>(6)</th>
+              <th className='text-center'>(7)</th>
+              <th className='text-center'>(8)</th>
             </tr>
-            <tr>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-            </tr>
-            <tr>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-            </tr>
-            <tr>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-            </tr>
-          </tbody>
+          </thead>
         </table>
       </div>
     );

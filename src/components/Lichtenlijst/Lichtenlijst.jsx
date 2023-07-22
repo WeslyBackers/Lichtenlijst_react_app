@@ -10,13 +10,6 @@ import LightsTable from '../LightsTable/LightsTable';
 
 const axios = require('axios');
 
-var data =[];
-
-axios.get('http://192.168.68.70:50100/lichtenlijst')
-  .then(function (response) {
-    data = response;
-    this.setState({'data':data});
-  });
 
 
 
@@ -26,29 +19,47 @@ class Lichtenlijst extends PureComponent {
 
     this.state = {
       hasError: false,
-      data:this.componentDidMount,
-    };
-  
+      data:"test",
+    }
+
   }
 
   componentDidMount = () => {
 
-    console.log(this.state.data);
+
+    axios.get('http://192.168.68.70:50100/lichtenlijst')
+
+    .then((response) => {
+
+      //console.log(response);
+      this.setState({data:response.data})
+      //console.log(this.state);
+
+    });
+
+
     
   }
 
-
   componentDidUpdate = () => {
-    console.log('Lichtenlijst did update');
 
+    console.log('test');
+    this.getZones();
   }
-Ò
- 
+
+  getZones = () => {
+
+    console.log(this.state.data);
+  
+  }
 
   render () {
+    
     if (this.state.hasError) {
+    
       return <h1>Something went wrong.</h1>;
     }
+
     return (
       <div className="LichtenlijstWrapper">
         <Menu></Menu>

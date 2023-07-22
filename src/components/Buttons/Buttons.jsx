@@ -13,14 +13,9 @@ class Buttons extends PureComponent {
     };
   }
 
-
-
   componentDidMount = () => {
     console.log('Buttons mounted');
   }
-
-
-
 
   componentDidUpdate = () => {
 
@@ -28,7 +23,66 @@ class Buttons extends PureComponent {
 
   }
 
+  openJson = () => {
+  
+    console.log( "open JSON")
+  
+  }
 
+  openGml = () => {
+  
+    console.log( "open GML")
+  
+  }
+
+  openInleiding = () => {
+  
+    console.log( "open Inleiding")
+  
+  }
+
+  openChart = () =>{
+    var chart = document.getElementsByClassName('GisInfoWrapper');
+    console.log(chart);
+    // chart[0] is first tag with specifications about elements' classnames
+    console.log(chart[0].classList);
+    //this.openFullscreen();
+    //this.closeFullscreen();
+
+    if (chart[0].classList.contains('visually-hidden'))
+
+    {
+
+      chart[0].classList.remove('visually-hidden');
+
+    }
+
+    else{
+
+      chart[0].classList.add('visually-hidden');
+
+    }
+
+  }
+
+  printBook = () => {
+    window.print();
+  }
+
+  openInfo = () =>{
+    console.log('test');
+  }
+
+  openWorkflow = () => {
+
+    console.log('open Workflow')
+
+  }
+
+
+  openHistory =() => {
+    console.log("open History")
+  }
 
   openFullscreen = () => {
     var chart = document.getElementsByClassName('ChartWrapper');
@@ -52,42 +106,7 @@ class Buttons extends PureComponent {
   }
 
 
-  openChart = () =>{
-    var chart = document.getElementsByClassName('GisInfoWrapper');
-    console.log(chart);
-    // chart[0] is first tag with specifications about elements' classnames
-    console.log(chart[0].classList);
-    //this.openFullscreen();
-    //this.closeFullscreen();
-
-    if (chart[0].classList.contains('visually-hidden'))
-
-    {
-
-      chart[0].classList.remove('visually-hidden');
-
-    }
-
-    else{
-
-      chart[0].classList.add('visually-hidden');
-
-    }
-    
-    
-
-  }
-
-
-  printBook = () => {
-    window.print();
-  }
-
-  openInfo = () =>{
-    console.log('test');
-  }
-
-
+ 
 
   render () {
     if (this.state.hasError) {
@@ -95,31 +114,31 @@ class Buttons extends PureComponent {
     }
 
     var buttonslist = [    
-    {'id':0,'caption':'JSON','function':this.openJson,'style':'primary'},
-    {'id':1,'caption':'GML','function':this.openGml, 'style':'primary'},
-    {'id':2,'caption':'Inleiding','function':this.openInleiding,'data_bs_toggle':'collapse','data_bs_target':'#inleiding','aria_controls':'collapseExample','aria_expanded':'false','style':'info'},
+    {'id':0,'caption':'JSON','function':this.openJson(this),'style':'primary'},
+    {'id':1,'caption':'GML','function':this.openGml(this), 'style':'primary'},
+    {'id':2,'caption':'Inleiding','function':this.openInleiding(this),'data_bs_toggle':'collapse','data_bs_target':'#inleiding','aria_controls':'collapseExample','aria_expanded':'false','style':'info'},
     {'id':3,'caption':'Kaart','function':this.openChart.bind(this),'data_bs_toggle':'collapse','data_bs_target':'#chart','aria_controls':'collapseExample','aria_expanded':'false','style':'primary'},
     {'id':4,'caption':'Print','function':this.printBook.bind(this),'style':'primary'},
     {'id':5,'caption':'Info data','function':this.openInfo.bind(this),'data_bs_toggle':'collapse','data_bs_target':'#info','aria_controls':'collapseExample','aria_expanded':'true','style':'primary'},
-    {'id':6,'caption':'Werkwijze','function':this.openWorkflow,'style':'info'},
-    {'id':7,'caption':'Geschiedenis','function':this.openHistory,'style':'info'}
+    {'id':6,'caption':'Werkwijze','function':this.openWorkflow(this),'style':'info'},
+    {'id':7,'caption':'Geschiedenis','function':this.openHistory(this),'style':'info'}
   ]
   var buttons = []
 
   buttonslist.forEach((item, index) =>{
     buttons.push(
       <Button className='p-1 m-1'
-      variant={item.style}
-      name={item.caption} 
-      id={item.id} 
-      functions={item.function} 
-      data_bs_toggle={item.data_bs_toggle} 
-      data_bs_target={item.data_bs_target} 
-      aria_controls={item.aria_controls} 
-      aria_expanded={item.aria_expanded}
-      key={item.id}
-      onClick={item.function}>
-      {item.caption}
+        variant={item.style}
+        name={item.caption} 
+        id={item.id} 
+        function={item.function} 
+        data_bs_toggle={item.data_bs_toggle} 
+        data_bs_target={item.data_bs_target} 
+        aria_controls={item.aria_controls} 
+        aria_expanded={item.aria_expanded}
+        key={item.id}
+        onClick={item.function}>
+        {item.caption}
       </Button>)
   })
 
