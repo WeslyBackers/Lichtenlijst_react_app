@@ -57,7 +57,9 @@ class LightsTable extends PureComponent {
               <th className='text-center'>(8)</th>
             </tr>
           </thead>
+
         </table>
+      {this.props.tables}
       </div>
     );
   }
