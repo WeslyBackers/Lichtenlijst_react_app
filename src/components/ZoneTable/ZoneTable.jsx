@@ -38,29 +38,29 @@ class ZoneTable extends PureComponent {
 
     return (
 
-      <div className="ZoneTableWrapper m-2">
+      <div className="ZoneTableWrapper">
         <h6 className='h6 zone_title'>{this.props.title}</h6>
         <Table striped className='striped' name={this.props.title}>
           <tbody>
             <tr>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
+              <td className='text-center td_1'>test</td>
+              <td className='text-center td_2'>test</td>
+              <td className='text-center td_3'>test</td>
+              <td className='text-center td_4'>test</td>
+              <td className='text-center td_5'>test</td>
+              <td className='text-center td_6'>test</td>
+              <td className='text-center td_7'>test</td>
+              <td className='text-center td_8'>test</td>
             </tr>
             <tr>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
-              <td>test</td>
+              <td className='text-center td_1'>test</td>
+              <td className='text-center td_2'>test</td>
+              <td className='text-center td_3'>test</td>
+              <td className='text-center td_4'>test</td>
+              <td className='text-center td_5'>test</td>
+              <td className='text-center td_6'>test</td>
+              <td className='text-center td_7'>test</td>
+              <td className='text-center td_8'>test</td>
             </tr>
           </tbody>
         </Table>

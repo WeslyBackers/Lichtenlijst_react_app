@@ -37,24 +37,24 @@ class LightsTable extends PureComponent {
         <table className=''>
           <thead>
             <tr>
-              <th className='text-center p-2'>VOLGNR.</th>
-              <th className='text-center'>GEBIED-PLAATS-NAAM</th>
-              <th className='text-center'>POSITIE GEO.</th>
-              <th className='text-center' >LICHT-EN MISTSEIN</th>
-              <th className='text-center'>HOOGTE</th>
-              <th className='text-center'>DRACHT</th>
-              <th className='text-center'>BESCHRIJVING</th>
-              <th className='text-center'>VERDERE GEGEVENS</th>
+              <th className='text-center p-2 th_1'>VOLGNR.</th>
+              <th className='text-center th_2'>GEBIED-PLAATS-NAAM</th>
+              <th className='text-center th_3'>POSITIE GEO.</th>
+              <th className='text-center th_4' >LICHT-EN MISTSEIN</th>
+              <th className='text-center th_5'>HOOGTE</th>
+              <th className='text-center th_6'>DRACHT</th>
+              <th className='text-center th_7'>BESCHRIJVING</th>
+              <th className='text-center th_8' >VERDERE GEGEVENS</th>
             </tr>
             <tr>
-              <th className='text-center p-2'>(1)</th>
-              <th className='text-center'>(2)</th>
-              <th className='text-center'>(3)</th>
-              <th className='text-center'>(4)</th>
-              <th className='text-center'>(5)</th>
-              <th className='text-center'>(6)</th>
-              <th className='text-center'>(7)</th>
-              <th className='text-center'>(8)</th>
+              <th className='text-center p-2 th_1'>(1)</th>
+              <th className='text-center th_2'>(2)</th>
+              <th className='text-center th_3'>(3)</th>
+              <th className='text-center th_4'>(4)</th>
+              <th className='text-center th_5'>(5)</th>
+              <th className='text-center th_6'>(6)</th>
+              <th className='text-center th_7'>(7)</th>
+              <th className='text-center th_8'>(8)</th>
             </tr>
           </thead>
 
